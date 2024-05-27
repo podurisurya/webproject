@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Payment Details</title>
+        <style>
+            #sub {
+                padding: 20px 50px; 
+                background-color:rgba(0,0,0,0.6);
+                /opacity: 0.4;/
+                box-sizing: border-box;
+                width: calc(100% - 100px); 
+                max-width: 800px; 
+                margin: 0 auto; 
+                border-radius: 10px; 
+                padding-top: 20px;
+            }
+            body {
+            position: relative;
+            margin: 0; 
+            min-height: 100vh; 
+            /* background-image: url("https://cdn1.photostockeditor.com/c/2411/macro-photography-of-black-circuit-board-technology-tech.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://cdn1.photostockeditor.com/c/2411/macro-photography-of-black-circuit-board-technology-tech.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            filter: brightness(1.5); 
+            z-index: -1; 
+        }
+        .input {
+            width: 100%;
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border-radius: 5px;
+            border: 1px solid #ccc; 
+            box-sizing: border-box;
+        }
+        #head{
+            text-align: center;
+            color: white;
+        }
+        #button{
+            padding: 10px 40px 10px 40px;
+           margin-left: 310px;
+           color: white;
+           font-weight: 900;
+           background-color:brown;
+        }
+        .back{
+            border: none;
+            background-color: rgb(148, 86, 206);
+            border-radius: 10px;
+           padding: 10px;
+           margin-top: 5px;
+           margin-left: 5px;
+        }
+
+        </style>
+    </head>
+    <body id="body">
+        <button class="back"><a href="front.html">GO BACK</button></a>
+          <div id="sub">
+            <div>
+                <h1 id="head">Payment Details</h1>
+                <form name="paymentForm">
+                <input type="text" placeholder="Enter Your Name" required class="input" id="name" name="Name"><br><br>
+                <input type="email" placeholder="Email Address" required class="input" id="email" name="Email"><br><br>
+                <input type="number" placeholder="Card Number" required class="input" id="cardNumber"name="Number"><br><br>
+                <input type="text" placeholder="CVV" required class="input" id="cvv" style="width: 30%;">
+                <input type="text" placeholder="Expiry Date (MM/YY)" required class="input" id="expiryDate" style="width: 69%;">
+               <br><br>
+                <button type="submit" id="button">SUBMIT</button>
+            </form>
+            </div>
+          </div>
+          <script src="payment.js"></script>
+    </body>
+</html>
